@@ -1,0 +1,20 @@
+<div class="container">
+ <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">配属履歴</th>
+          <td><%= @assignment_history.assignment %></td>
+      </tr>
+      <tr>
+        <th scope="row">配属年月日</th>
+          <td><%= @assignment_history.start_date %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p id="notice"><%= notice %></p>
+ <%= link_to '社員データ', member_path %>
+ <%= link_to '家族', family_path %>
+ <%= link_to '適正テスト点数', score_path %>
+ <%= link_to '勤怠管理', time_record_path %>
+ <%= link_to '検索', members_path %>

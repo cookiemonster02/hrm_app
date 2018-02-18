@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">出勤時刻</th>
+         <td><%= @time_record.start_time %></td>
+      </tr>
+      <tr>
+        <th scope="row">退勤時刻</th>
+         <td><%= @time_record.leaving_time %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p id="notice"><%= notice %></p>
+ <%= link_to '社員データ', member_path %>
+ <%= link_to '配属先履歴', assignment_history_path %>
+ <%= link_to '家族', family_path %>
+ <%= link_to '適正テスト点数', score_path %>
+ <%= link_to '検索', members_path %>

@@ -1,0 +1,68 @@
+<%= form_for(@member) do |f| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% @member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.lastname' %></label>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.lastname_kana' %></label>
+    <%= f.text_field :lastname_kana %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.firstname' %></label>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.firstname_kana' %></label>
+    <%= f.text_field :firstname_kana %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.birthday' %></label>
+    <%= f.date_field :birthday %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.hire_date' %></label>
+    <%= f.date_field :hire_date %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.sex' %></label>
+    <%=  f.select :sex, Member.sex.options %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.assignment' %></label>
+    <%=  f.select :assignment, Member.assignment.options %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.employee_attributes' %></label>
+    <%=  f.select :employee_attributes, Member.employee_attributes.options %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.position' %></label>
+    <%=  f.select :position, Member.position.options %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.grade' %></label>
+    <%=  f.select :grade, Member.grade.options %>
+  </div>
+  <div class="form-group">
+    <label><%= t 'activerecord.attributes.member.character_judgment' %></label>
+    <%=  f.select :character_judgment, Member.character_judgment.options %>
+  </div>
+ <div class="form-actions">
+    <%= f.submit :create, :class => 'btn-primary' %>
+  </div>
+  </div>
+  <%= link_to 'やり直し', new_member_path %>
+<% end %>
+

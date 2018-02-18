@@ -1,0 +1,56 @@
+<% provide(:title, @member.lastname) %>
+<div class="container">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.lastname' %></th>
+        <td><%= @member.lastname %></td>
+        <td><%= @member.lastname_kana %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.firstname' %></th>
+        <td><%= @member.firstname %></td>
+        <td><%= @member.firstname_kana %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.birthday' %></th>
+        <td><%= @member.birthday %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.hire_date' %></th>
+        <td><%= @member.hire_date %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.sex' %></th>
+        <td><%= @member.sex.text %></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.assignment' %></th>
+        <td><%= @member.assignment %></td>
+      </tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.employee_attributes' %></th>
+        <td><%= @member.employee_attributes %></td>
+      </tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.position' %></th>
+        <td><%= @member.position %></td>
+      </tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.grade' %></th>
+        <td><%= @member.grade %></td>
+      </tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.years_of_attendance' %></th>
+        <td><%= @member.years_of_attendance %></td>
+      </tr>
+        <th scope="row"><%= t 'activerecord.attributes.member.character_judgment' %></th>
+        <td><%= @member.character_judgment %></td>
+      </tr>
+    </tbody>
+  </table>
+
+ <p id="notice"><%= notice %></p>
+ <%= link_to '配属先履歴', assignment_history_path %>
+ <%= link_to '家族', family_path %>
+ <%= link_to '適正テスト点数', score_path %>
+ <%= link_to '勤怠管理', time_record_path %>
+ <%= link_to '検索', members_path %>
+
+</div>

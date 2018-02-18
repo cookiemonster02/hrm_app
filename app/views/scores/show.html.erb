@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">計画力</th>
+         <td><%= @score.plan %></td>
+      </tr>
+      <tr>
+        <th scope="row">デザイン力</th>
+         <td><%= @score.design %></td>
+      </tr>
+      <tr>
+        <th scope="row">事務力</th>
+         <td><%= @score.clerk %></td>
+      </tr>
+      <tr>
+        <th scope="row">総合得点</th>
+         <td><%= @score.total_score %></td>
+      </tr>
+      <tr>
+        <th scope="row">判定結果</th>
+         <td><%= @score.judgment %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p id="notice"><%= notice %></p>
+ <%= link_to '社員データ', member_path %>
+ <%= link_to '配属先履歴', assignment_history_path %>
+ <%= link_to '家族', family_path %>
+ <%= link_to '勤怠管理', time_record_path %>
+ <%= link_to '検索', members_path %>
